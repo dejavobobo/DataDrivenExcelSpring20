@@ -1,14 +1,10 @@
 package page;
 
-import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class AddCustomerPage extends BasePage{
 	
@@ -35,7 +31,7 @@ WebDriver driver;
 	WebElement PHONE_FIELD_LOCATOR;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"address\"]")
 	WebElement ADDRESS_FIELD_LOCATOR;
-	@FindBy(how = How.XPATH, using = "//*[@id=\"citi\"]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"city\"]")
 	WebElement CITY_FIELD_LOCATOR;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"state\"]")
 	WebElement STATE_FIELD_LOCATOR;
@@ -103,7 +99,7 @@ WebDriver driver;
 	
 	public void clickOnSaveButton() {
 		SAVE_BUTTON_LOCATOR.click();
-		BasePage.waitForElement(driver, 3, By.xpath("//*[@id=\"summary\"]"));
+		BasePage.waitForElement(driver, 3, By.xpath("//*[@id=\"submit\"]"));
 		
 	}
 	
